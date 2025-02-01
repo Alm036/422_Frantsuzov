@@ -1,12 +1,30 @@
-﻿<Window x:Class="_422_Frantsuzov.MainWindow"
+﻿<Window x:Class="Пр1_ПИТ_422_Frantsuzov.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:_422_Frantsuzov"
+        xmlns:local="clr-namespace:Пр1_ПИТ_422_Frantsuzov"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
+        Title="MainWindow" Height="350" Width="300"
+        Closing="MainWindow_Closing">
+    <Grid Margin="10">
+        <Image Margin="0,0,10,241" Source="/Image1.png" ToolTip="Это функция, которая заложена в функции рассчёта приложения"/>
+
+        <Label Content="x" HorizontalAlignment="Left" Margin="10,86,0,0" VerticalAlignment="Top" ToolTip="Переменная функции f"/>
+        <TextBox Name="TextBox_x"  Text="1" HorizontalAlignment="Left" Margin="42,90,0,0" VerticalAlignment="Top" Width="98"/>
+
+        <Label Content="b" HorizontalAlignment="Left" Margin="10,123,0,0" VerticalAlignment="Top" ToolTip="Переменная функции s"/>
+        <TextBox Name="TextBox_b" Text="3" HorizontalAlignment="Left" Margin="42,127,0,0" VerticalAlignment="Top" Width="98"/>
+
+        <RadioButton Name="Checked_shx" Content="sh(x)" HorizontalAlignment="Left" Margin="42,167,0,0" VerticalAlignment="Top" IsChecked="True" ToolTip="Гиперболический синус"/>
+        <RadioButton Name="Checked_x_2" Content="x^2" HorizontalAlignment="Left" Margin="42,187,0,0" VerticalAlignment="Top" ToolTip="Возведение в квадрат переменной x"/>
+        <RadioButton Name="Checked_e_x" Content="e^x" HorizontalAlignment="Left" Margin="42,207,0,0" VerticalAlignment="Top" ToolTip="Возведение в х-степень экспоненты"/>
+
+        <Button Content="Вычислить" HorizontalAlignment="Left" Margin="140,157,0,0" VerticalAlignment="Top" Click="Calc_Button_Click" ToolTip="Запуск вычислений"/>
+        <Button Content="Очистить" HorizontalAlignment="Left" Margin="140,202,0,0" VerticalAlignment="Top" Click="Clear_Button_Click" ToolTip="Очистка всех текстовых полей"/>
+
+        <Label Content="Ответ" HorizontalAlignment="Left" Margin="0,227,0,0" VerticalAlignment="Top" ToolTip="Результат вычислений"/>
+        <TextBox Name="TextBox_res" Text="0" HorizontalAlignment="Left" Margin="42,231,0,0" VerticalAlignment="Top" Width="98" IsEnabled="False" ToolTip="Это поле нельзя изменить"/>
+
     </Grid>
 </Window>
